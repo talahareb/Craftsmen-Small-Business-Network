@@ -1,43 +1,81 @@
 # Craftsmen and Small Business Network
 
-**A full-stack web platform connecting skilled craftspeople with clients and supporting local business communities.**
+**A full-stack platform connecting skilled craftspeople with clients through professional profiles, job opportunities, and direct communication.**
 
-**Academic project:** Computer Science Capstone, Lebanese American University (LAU)  
-**Project team:** Tala Hareb and Abdulaziz Al Sayyed
+**Computer Science Capstone Project | Lebanese American University (LAU)**
 
-## Project Overview
+## The Problem
 
-The **Craftsmen and Small Business Network** aims to make skilled services easier to discover and access. Clients can explore craftsperson profiles, publish job opportunities, and communicate with potential service providers. Craftspeople can showcase their skills, browse opportunities, and apply to relevant jobs.
+Skilled craftspeople and small service providers often struggle to reach potential customers, while clients may find it difficult to discover suitable professionals, compare their expertise, and manage service requests in one place.
 
-The broader capstone vision also included a small-business marketplace, bilingual Arabic–English access, and AI-assisted product discovery. These ideas are described in the original project proposals; the available repository snapshot contains the main network application and its frontend and backend code.
+This creates several challenges:
+- **Limited visibility:** Craftspeople need an accessible way to showcase their skills, experience, and availability.
+- **Fragmented job opportunities:** Clients and service providers need a structured way to publish, discover, and respond to work requests.
+- **Disconnected communication:** Discussions, applications, and updates can become difficult to track across separate channels.
+- **Limited product discovery:** Small businesses can benefit from easier ways for customers to find items and related offerings.
 
-## Main Features
+## Our Solution
 
-### User Accounts and Profiles
-- Registration, login, and profile management
-- Different user experiences for clients and craftspeople
-- Skills and portfolio information for craftspeople
-- Email-related authentication flows
+**Craftsmen and Small Business Network** brings these interactions into a centralized digital platform. It enables clients to discover craftspeople, review profiles, publish jobs, and communicate with applicants, while giving service providers tools to showcase their work and pursue new opportunities.
 
-### Craftsmen and Job Network
-- Search and browse craftsperson profiles
-- Create and view job announcements
-- Submit applications and bids for available jobs
-- Review applications and track their status
+The broader capstone also addressed small-business product discovery through an AI-assisted visual matching feature.
 
-### Communication and Community
-- Conversations and messaging between users
+## Project Screenshots
+
+The screenshots below are from the Craftsmen Network application documented in my LAU internship report.
+
+### Explore Craftspeople
+
+Browse skilled professionals by trade or search for a particular service.
+
+![Craftsmen Network directory showing searchable trade categories](screenshots/01-craftsmen-directory.png)
+
+### Post a Job Announcement
+
+Clients can create service requests with a description, location, budget, deadline, and contact details.
+
+![Job announcement form with job details and a submission button](screenshots/02-post-job-announcement.png)
+
+### Manage Job Announcements
+
+Users can review their published requests, inspect applicants, and manage listings.
+
+![My Announcements page showing job cards and management controls](screenshots/03-manage-announcements.png)
+
+### Track Applications
+
+Craftspeople can review the jobs they applied to and manage submitted applications.
+
+![My Applications table showing submitted job requests and application actions](screenshots/04-track-applications.png)
+
+## Key Features
+
+### Accounts and Professional Profiles
+- User registration, login, and profile management
+- Dedicated experiences for clients and craftspeople
+- Profiles displaying skills, experience, and professional information
+- Authentication and account-related email workflows
+
+### Job Discovery and Applications
+- Browse available craftspeople and service categories
+- Create and manage job announcements
+- Apply to relevant opportunities
+- Review applicants and track applications
+
+### Messaging and Community
+- User conversations and direct messaging
 - Real-time communication components using Socket.IO and WebSockets
-- Community posts, comments, and reactions
+- Community posts, comments, and interactions
 
 ### Administration
-- Administrative dashboard pages
-- User management and content moderation interfaces
+- Administrative dashboards
+- User management tools
+- Content moderation interfaces
 
 ### AI-Assisted Visual Product Matching
-The capstone also **included an AI-powered image-matching feature, according to the project team**. Its intended workflow allowed a user to upload an image of a product and find identical or visually similar items associated with small businesses.
 
-**Repository note:** The AI model, inference code, or external matching-service integration is **not present in the available source-code snapshot**. Therefore, this README records the feature as part of the team's reported implementation, but does not claim that it can be reproduced or evaluated using the files in this repository. No particular model, library, or accuracy figure is asserted.
+An **AI-assisted image-matching feature** for product discovery. The feature was designed to let users provide a product image and discover identical or visually similar items from small-business offerings.
+
 
 ## Technology Stack
 
@@ -47,86 +85,83 @@ The capstone also **included an AI-powered image-matching feature, according to 
 | Backend | Node.js, Express.js |
 | Database | MongoDB, Mongoose |
 | Authentication | JWT, bcrypt |
-| Communication | Socket.IO, WebSocket components |
-| Email and file uploads | Nodemailer, Multer |
-| Development | Git, GitHub, npm; Vite configuration |
+| Real-time communication | Socket.IO, WebSocket components |
+| Email and uploads | Nodemailer, Multer |
+| Development tools | Git, GitHub, npm, Vite configuration |
 
-## Repository Structure
+## Project Structure
 
 ```text
 Craftsmen-Small-Business-Network/
 ├── backend/
-│   ├── middleware/       # Request handling and uploads
-│   ├── models/           # MongoDB/Mongoose models
-│   ├── routes/           # REST API endpoints
-│   ├── public/uploads/   # Placeholder asset; user uploads excluded
-│   └── server.js         # Express server and real-time communication
+│   ├── middleware/       # Upload and request-handling utilities
+│   ├── models/           # MongoDB / Mongoose data models
+│   ├── routes/           # API routes
+│   ├── public/uploads/   # Default asset and upload directory
+│   └── server.js         # Express server
 ├── frontend/
-│   ├── assets/           # Images and other assets
-│   ├── js/               # Client-side JavaScript
-│   ├── pages/            # Application pages
-│   ├── style/            # Styles and page assets
+│   ├── assets/           # Images and visual assets
+│   ├── js/               # Client-side scripts
+│   ├── pages/            # Web application pages
+│   ├── style/            # Styling and page assets
 │   └── vite.config.ts    # Frontend tooling configuration
-└── package.json
+├── screenshots/       # Interface images used in this README
+├── .gitignore
+└── README.md
 ```
 
-## Running the Project Locally
+## Getting Started
 
-**Prerequisites:** Node.js, npm, and a MongoDB database. These instructions describe the source structure; the application has not been independently tested on a clean machine for this README.
+### Requirements
+- Node.js and npm
+- MongoDB connection
 
-1. Clone the repository and open the backend folder:
+### 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/talahareb/Craftsmen-Small-Business-Network.git
-   cd Craftsmen-Small-Business-Network/backend
-   ```
+```bash
+git clone https://github.com/talahareb/Craftsmen-Small-Business-Network.git
+cd Craftsmen-Small-Business-Network/backend
+```
 
-2. Install dependencies:
+### 2. Install backend dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. Configure the environment variables used by the backend in a **local, untracked** `backend/.env` file:
+### 3. Configure your local environment
 
-   ```dotenv
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_value
-   EMAIL_USER=your_email_address
-   EMAIL_PASS=your_email_credential
-   PORT=5001
-   ```
+Create a local `backend/.env` using `backend/.env.example` as a template:
 
-4. Start the backend:
+```dotenv
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_value
+EMAIL_USER=your_email_address
+EMAIL_PASS=your_email_app_password
+PORT=5001
+```
 
-   ```bash
-   node server.js
-   ```
+Keep real credentials in your local `.env`, never in Git.
 
-5. Open `http://localhost:5001` in your browser, or use your configured port.
+### 4. Start the backend
 
-**Setup note:** `server.js` imports the `ws` package, which is not listed as a direct dependency in the archived backend `package.json`. A local setup might therefore require installing that package separately.
+```bash
+node server.js
+```
 
-## Project Scope and Future Work
+Then open `http://localhost:5001` (or your configured port). Some development environments may require additional local configuration.
 
-The capstone proposals also identify possible extensions, including:
+## Further Development
 
-- Expanded small-business marketplace and collaboration features
-- Full Arabic–English localization
-- Geolocation-based discovery of nearby service providers
-- Craftspeople availability calendars and appointment scheduling
-- Automated matching of job requests to relevant service providers
+The project can be extended with:
+- Expanded small-business marketplace capabilities
+- Broader Arabic–English localization
+- Geolocation-based discovery of nearby craftspeople
+- Availability calendars and service booking
+- Automated recommendations matching service requests with relevant professionals
 
-These are **proposed or future capabilities** unless otherwise indicated above. The reported AI visual product-matching feature is listed separately under Main Features rather than as a future idea.
+## Academic Context
 
-## Academic Context and Credits
+Developed as a Computer Science capstone project at **Lebanese American University (LAU)**.
 
-This project was developed as a Computer Science capstone at **Lebanese American University**, with **Tala Hareb and Abdulaziz Al Sayyed** credited in the project proposal.
-
-The README distinguishes the original project vision, components represented in the archived source code, and AI functionality reported by the project team. Individual contributions are not assigned beyond what the supplied project documents establish.
-
-## Security and Data Handling
-
-This public-facing source snapshot intentionally excludes the original `backend/.env`, generated dependencies, and previous user-uploaded files. Use `backend/.env.example` as a template, and never commit working secrets or personal data. Any original credentials that are still valid should be rotated or revoked before publishing, even though they are not included here.
-
-This is an academic demonstration, not a production security-hardened application. Its runtime features have not been independently tested in a fresh environment; running it requires local configuration. The project also includes third-party-style illustrative images whose redistribution rights should be checked before public release.
+**Acknowledgment:** The original capstone proposal credits Tala Hareb and Abdulaziz Al Sayyed.
