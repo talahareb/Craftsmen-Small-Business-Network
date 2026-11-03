@@ -160,8 +160,4 @@ The project can be extended with:
 - Availability calendars and service booking
 - Automated recommendations matching service requests with relevant professionals
 
-## Academic Context
 
-Developed as a Computer Science capstone project at **Lebanese American University (LAU)**.
-
-**Acknowledgment:** The original capstone proposal credits Tala Hareb and Abdulaziz Al Sayyed.
