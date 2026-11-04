@@ -6,17 +6,19 @@
 
 ## Overview
 
-Finding skilled professionals and managing service requests can be challenging when profiles, job listings, and conversations are spread across different platforms. **Craftsmen and Small Business Network** brings these interactions together, helping clients discover service providers and giving craftspeople a space to showcase their skills and find opportunities.
+Finding skilled professionals and managing service requests can be challenging when profiles, job listings, and conversations are spread across different platforms. **Craftsmen and Small Business Network** brings these interactions together, helping clients discover service providers and giving craftspeople a place to showcase their skills and find opportunities.
+
+The project also explores **AI-assisted job posting**, using natural-language input to simplify the creation of structured job announcements.
 
 ## Key Features
 
 - **Accounts and profiles:** User registration, authentication, and professional profiles for clients and craftspeople.
 - **Craftsperson discovery:** Browse professionals and explore service categories.
 - **Job announcements:** Publish service requests, manage listings, and review applicants.
+- **AI-assisted job posting:** Interpret a job request written in everyday language, extract relevant details, and organize them into job-announcement fields.
 - **Applications:** Apply to opportunities and track submitted applications.
-- **Communication and community:** Direct messaging, real-time communication components, and community interactions.
+- **Communication and community:** Direct messaging, real-time communication, and community interactions.
 - **Administration:** User-management and content-moderation interfaces.
-- **AI-assisted visual product matching** to help users discover visually similar products from small businesses.
 
 ## Project Screenshots
 
@@ -53,9 +55,9 @@ View and manage applications submitted to job listings.
 | Database | MongoDB, Mongoose |
 | Authentication | JWT, bcrypt |
 | Real-time communication | Socket.IO, WebSockets |
-| AI & Computer Vision | AI-assisted image matching, visual similarity search, product recognition |
+| AI & Natural Language Processing | Natural-language understanding, information extraction, AI-assisted job posting |
 | Email and file uploads | Nodemailer, Multer |
-| Tooling | npm, Git, GitHub, Vite configuration |
+| Tooling | npm, Git, GitHub, Vite |
 
 ## Getting Started
 
@@ -64,8 +66,8 @@ View and manage applications submitted to job listings.
 1. Clone the repository and enter the backend directory:
 
    ```bash
-   git clone https://github.com/talahareb/Craftsmen-Small-Business-Network.git
-   cd Craftsmen-Small-Business-Network/backend
+   git clone https://github.com/talahareb/Craftsmen_Small_Business_Network.git
+   cd Craftsmen_Small_Business_Network/backend
    ```
 
 2. Install dependencies:
@@ -97,7 +99,7 @@ The example configuration uses port `5001`. Frontend access depends on the proje
 ## Project Structure
 
 ```text
-Craftsmen-Small-Business-Network/
+Craftsmen_Small_Business_Network/
 ├── backend/
 │   ├── middleware/
 │   ├── models/
@@ -119,5 +121,4 @@ Craftsmen-Small-Business-Network/
 - **Authentication and authorization:** Managing user accounts and protected application workflows.
 - **Real-time communication:** Supporting interactive messaging using Socket.IO and WebSockets.
 - **Data management:** Modeling profiles, job announcements, and applications with MongoDB.
-- **Artificial Intelligence & Computer Vision:** Integrating AI-assisted image matching to identify visually similar products and enhance product discovery.
-
+- **Artificial Intelligence & NLP:** Extracting structured information from natural-language job requests to support automated announcement creation.
