@@ -53,6 +53,7 @@ View and manage applications submitted to job listings.
 | Database | MongoDB, Mongoose |
 | Authentication | JWT, bcrypt |
 | Real-time communication | Socket.IO, WebSockets |
+| AI & Computer Vision | AI-assisted image matching, visual similarity search, product recognition |
 | Email and file uploads | Nodemailer, Multer |
 | Tooling | npm, Git, GitHub, Vite configuration |
 
